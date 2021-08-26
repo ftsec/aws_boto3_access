@@ -215,7 +215,7 @@ def get_resource(self):
 
 With the above instance invoked, our local ~/.aws/credentials file will be updated with the temporary access keys for us to use in the command line as the assumed role user. Any new call to our BotoSession will check for valid cached sessions before requesting new keys through the STS assume tole api.
 
-Below is a console output example
+Below is a console output example.
 
 ```bash
 2021-08-11 22:44:13,210 INFO     generating new request headers...
@@ -228,7 +228,7 @@ Below is a console output example
 2021-08-11 22:44:23,239 INFO     getting S3 resource
 ```
 
-You can also run your script through the command line by navigating into to project root and running below command
+You can also run your script through the command line by navigating into to project root and running below command. This will update your aws local credentials file with new access keys.
 ```bash
 python -m main -a ######### -r us-east-2 -rl rolename
 
