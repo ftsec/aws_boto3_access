@@ -1,6 +1,6 @@
 # Using Boto3 to request temporary AWS access keys with Okta and Conjur/Kerberos
 
-Today you will learn how to retrieve temporary tokens using the AWS Security Token Service (STS). This is a more secure recommendation  as opposed to sharing the default access keys for your account root user. First make sure you have an IAM user(s) created. We won't cover that in this session. For more information on creating an IAM role and granting it access to your resources visit [creating IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html). Let's get started. 
+Today you will learn how to retrieve temporary acess keys using the AWS Security Token Service (STS). This is a more secure recommendation  as opposed to sharing the default access keys for your account root user. First make sure you have an IAM user(s) created. We won't cover that in this session. For more information on creating an IAM role and granting it access to your resources visit [creating IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html). Let's get started. 
 
 ---
 ### Prerequisite
