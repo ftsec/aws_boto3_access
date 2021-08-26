@@ -1,13 +1,6 @@
 # Using Boto3 to request temporary AWS access keys with Okta and Conjur/Kerberos
 
 ---
-
----
-
----
-
----
-
 You are building an AWS utility script with python and you need continuous access to your resources and services. You must use a secret and access key to authenticate in order to have access to your resources. Whether you are using the CLI or the SDK for your preferred language you will always need some form of credentials to establish a trust relationship. 
 
 Now you have a root account and can create and discard new access keys at your disposal. All you have to do is copy your keys from the console upon creation and paste it in your config file or path environment variable. 
@@ -17,11 +10,6 @@ Great now you have privileged access to your AWS account. However, this is bad p
 Today you will learn how to retrieve temporary tokens using the AWS Security Token Service (STS). This is a more secure recommendation instead of sharing the credentials of your account root user. First make sure you have an IAM user(s) created. We won't cover that in this session. For more information on creating an IAM role and granting it access to your resources visit [creating IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html). Let's get started. 
 
 ---
-
----
-
----
-
 ### Prerequisite
 
 - Python 3.8+
@@ -62,9 +50,7 @@ C:\> venv\Scripts\activate.bat
 ---------------------------------
 PS C:\> venv\Scripts\Activate.ps1
 ```
-
 ---
-
 Install all dependencies
 
 ```python
@@ -82,9 +68,6 @@ Set an environment variable which will hold the IdP entry URL.
 ```bash
 export AWS_IPD_URL='enter your IdP url here' > ~/.bash_profile
 ```
-
----
-
 ---
 
 ### Install the Conjur CLI
@@ -142,8 +125,6 @@ def auth_conj(self, request_session) -> HttpNtlmAuth:
 
 ---
 
----
-
 With the auth loaded request session we can now make an authentication request and collect our SAML assertion string. 
 
 ```python
@@ -184,8 +165,6 @@ def authenticate(self) -> None:
 
 ---
 
----
-
 Our BotoSession class takes in 3 parameters, the region, role_name, and account id. That leaves one optional parameter client which can be initialized later when making a call to the get_client function.
 
 ```python
@@ -211,8 +190,6 @@ class BotoSession:
         properties.set_role(role_name)
         self.update_credentials_file()
 ```
-
----
 
 ---
 
