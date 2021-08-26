@@ -231,4 +231,14 @@ Below is a console output example
 You can also run your script through the command line by navigating into to project root and running below command
 ```bash
 python -m main -a ######### -r us-east-2 -rl rolename
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a ACCOUNT, --account ACCOUNT
+                        your aws account id
+  -r REGION, --region REGION
+                        your region e.g "us-east-2"
+  -rl ROLE, --role ROLE
+                        the role you would like to assume
+
 ```
