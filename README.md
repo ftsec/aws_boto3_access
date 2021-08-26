@@ -200,10 +200,10 @@ Finally! We have an entry point into our application. We can now provide the req
 
 ```python
 boto = BotoSession(
-						region='us-east-2'
-					, account='##############'
-					, role_name='sanbox'
-					)
+		region='us-east-2'
+	      , account='##############'
+	      , role_name='sanbox'
+	      )
 client = boto.get_client('sqs')
 resource = session.get_resource('s3')
 ```
