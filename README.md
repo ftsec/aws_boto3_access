@@ -23,7 +23,7 @@ Today you will learn how to retrieve temporary tokens using the AWS Security Tok
 ### Installation
 
 ```json
-git clone 
+git clone git@github.com:ftasha/aws_boto3_access.git
 ```
 
 I am assuming you have the latest installation of python and a dedicated integrated IDE. I also recommend you use a virtual environment to avoid dependency conflicts with your global python interpreter. If you need help creating a virtual environment visit [setting up you virtual environments](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/venv-win.html) [Windows](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/venv-win.html) | [Mac](https://sourabhbajaj.com/mac-setup/Python/virtualenv.html) to get started. Navigating to your root directory and running the below command in your terminal should pull down a new virtual environment folder. I named mine 'venv'.
