@@ -1,6 +1,5 @@
 # Using Boto3 to request temporary AWS access keys with Okta and Conjur/Kerberos
 
----
 You are building an AWS utility script with python and you need continuous access to your resources and services. You must use a secret and access key to authenticate in order to have access to your resources. Whether you are using the CLI or the SDK for your preferred language you will always need some form of credentials to establish a trust relationship. 
 
 Now you have a root account and can create and discard new access keys at your disposal. All you have to do is copy your keys from the console upon creation and paste it in your config file or path environment variable. 
@@ -24,6 +23,8 @@ Today you will learn how to retrieve temporary tokens using the AWS Security Tok
 - macOS Catalina or later
 - Windows 10 or later
 - Ubuntu / Parrot / Fedora
+
+---
 
 ### Installation
 
@@ -50,13 +51,13 @@ C:\> venv\Scripts\activate.bat
 ---------------------------------
 PS C:\> venv\Scripts\Activate.ps1
 ```
----
+
 Install all dependencies
 
 ```python
 pip3 install -r requirements.txt
 ```
-
+---
 ### Authentication
 
 You need to have an AWS supported IdP, short for Identity provider in order for the script to work correctly. I will be using Okta for today's example. 
@@ -68,8 +69,6 @@ Set an environment variable which will hold the IdP entry URL.
 ```bash
 export AWS_IPD_URL='enter your IdP url here' > ~/.bash_profile
 ```
----
-
 ### Install the Conjur CLI
 
 > Not needed if you plan on using Kerberos
@@ -123,7 +122,6 @@ def auth_conj(self, request_session) -> HttpNtlmAuth:
 			  return request_session.auth = HTTPKerberosAuth(mutual_authentication=DISABLED,sanitize_mutual_error_response=False
 ```
 
----
 
 With the auth loaded request session we can now make an authentication request and collect our SAML assertion string. 
 
@@ -163,7 +161,6 @@ def authenticate(self) -> None:
         return assertion
 ```
 
----
 
 Our BotoSession class takes in 3 parameters, the region, role_name, and account id. That leaves one optional parameter client which can be initialized later when making a call to the get_client function.
 
