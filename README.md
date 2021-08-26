@@ -233,5 +233,3 @@ Below is a console output example
 2021-08-11 22:44:23,214 INFO     getting SQS client
 2021-08-11 22:44:23,239 INFO     getting S3 resource
 ```
-
-The full code can be found on my GitHub page.
