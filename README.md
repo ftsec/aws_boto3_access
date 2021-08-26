@@ -1,12 +1,6 @@
 # Using Boto3 to request temporary AWS access keys with Okta and Conjur/Kerberos
 
-You are building an AWS utility script with python and you need continuous access to your resources and services. You must use a secret and access key to authenticate in order to have access to your resources. Whether you are using the CLI or the SDK for your preferred language you will always need some form of credentials to establish a trust relationship. 
-
-Now you have a root account and can create and discard new access keys at your disposal. All you have to do is copy your keys from the console upon creation and paste it in your config file or path environment variable. 
-
-Great now you have privileged access to your AWS account. However, this is bad practice. It may be very convenient, though it poses a risk to your account and resources. Anyone who has the access keys will also have access to all your account resources. 
-
-Today you will learn how to retrieve temporary tokens using the AWS Security Token Service (STS). This is a more secure recommendation instead of sharing the credentials of your account root user. First make sure you have an IAM user(s) created. We won't cover that in this session. For more information on creating an IAM role and granting it access to your resources visit [creating IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html). Let's get started. 
+Today you will learn how to retrieve temporary tokens using the AWS Security Token Service (STS). This is a more secure recommendation  as opposed to sharing the default access keysfor your account root user. First make sure you have an IAM user(s) created. We won't cover that in this session. For more information on creating an IAM role and granting it access to your resources visit [creating IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html). Let's get started. 
 
 ---
 ### Prerequisite
