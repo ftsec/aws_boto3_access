@@ -227,3 +227,8 @@ Below is a console output example
 2021-08-11 22:44:23,214 INFO     getting SQS client
 2021-08-11 22:44:23,239 INFO     getting S3 resource
 ```
+
+You can also run your script through the command line by navigating into to project root and running below command
+```bash
+python -m main -a ######### -r us-east-2 -rl rolename
+```
