@@ -230,7 +230,7 @@ Below is a console output example.
 
 You can also run your script through the command line by navigating into to project root and running below command. This will update your aws local credentials file with new access keys.
 ```bash
-python -m main -a ######### -r us-east-2 -rl rolename
+python -m main -a 123456434 -r us-east-2 -rl rolename
 
 optional arguments:
   -h, --help            show this help message and exit
