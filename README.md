@@ -56,7 +56,7 @@ pip3 install -r requirements.txt
 
 You need to have an AWS supported IdP, short for Identity provider in order for the script to work correctly. I will be using Okta for today's example. 
 
-Make sure you have the AWS federated user provisioned in your IdP application settings. This establishes a trust relationship giving your IdP access to your AWS roles through the use of single sing-on with SAML. With this trust relationship we can sign into with our IdP and use the SAML assertion response to authenticate and assume our AWS role. There are a number of ways to securely authenticate into your IdP. 
+Make sure you have the AWS federated user provisioned in your IdP application settings. This establishes a trust relationship giving your IdP access to your AWS roles through the use of single sign-on with SAML. With this trust relationship we can sign in with our IdP and use the SAML assertion response to authenticate and assume our AWS role. There are a number of ways to securely authenticate into your IdP. 
 
 Set an environment variable which will hold the IdP entry URL.
 
@@ -228,7 +228,7 @@ Below is a console output example.
 2021-08-11 22:44:23,239 INFO     getting S3 resource
 ```
 
-You can also run your script through the command line by navigating into to project root and running below command. This will update your aws local credentials file with new access keys.
+You can also run the script through the command line by navigating to the project root and running the below command. This will update your local aws credentials file with new access keys.
 ```bash
 python -m main -a 123456434 -r us-east-2 -rl rolename
 
