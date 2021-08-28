@@ -184,12 +184,6 @@ class BotoSession:
 
 ---
 
-After making a call using our BotoSession API, we are given temporary credentials using the security token service. This  allows us to establish a temporary session which will expire in an our. 
-
-```bash
-aws iam update-role --role-name sanbox --max-session-duration 3600
-```
-
 Finally! We have an entry point into our application. We can now provide the required parameters and start requesting AWS services and resources by calling both get functions.
 
 ```python
@@ -242,3 +236,14 @@ optional arguments:
                         the role you would like to assume
 
 ```
+
+
+
+TIP:
+
+
+If you think you need a longer session, you can run the below command in an admin environment to increase the session duration for an IAM user.
+```bash
+aws iam update-role --role-name sanbox --max-session-duration 3600
+```
+
